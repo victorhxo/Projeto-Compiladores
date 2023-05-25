@@ -1,0 +1,10 @@
+DECLARACOES
+zInt x
+rFloat y
+zInt z
+
+ALGORITIMO
+    -> 10 = x
+    -> 10 = y
+    -> (x+y) = z
+    out z
