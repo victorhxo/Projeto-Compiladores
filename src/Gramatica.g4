@@ -1,7 +1,7 @@
 grammar Gramatica;
 
 DEC: 'DECLARACOES';
-ALG: 'ALGORITIMO';
+ALG: 'ALGORITMO';
 TIPO: 'zInt' | 'rFloat';
 ATR: '->';
 IGUAL: '=';

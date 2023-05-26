@@ -14,7 +14,7 @@ OP_REL=13
 WS=14
 ErrorChar=15
 'DECLARACOES'=1
-'ALGORITIMO'=2
+'ALGORITMO'=2
 '->'=4
 '='=5
 '('=6

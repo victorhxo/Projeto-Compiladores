@@ -36,7 +36,7 @@ public class GramaticaLexer extends Lexer {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'DECLARACOES'", "'ALGORITIMO'", null, "'->'", "'='", "'('", "')'", 
+			null, "'DECLARACOES'", "'ALGORITMO'", null, "'->'", "'='", "'('", "')'", 
 			"'out'", "'in'"
 		};
 	}
