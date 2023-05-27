@@ -7,7 +7,7 @@ import java.io.IOException;
 public class ExemploLexer {
 
     public static void main (String [] args){
-        String filename = "C:\\Users\\victo\\OneDrive\\Desktop\\UFLA\\6 Periodo\\Compiladores\\Projeto-Compiladores\\src\\codigos-teste\\codigoErro.txt";
+        String filename = "src\\codigos-teste\\codigoErro.txt";
         try {
             CharStream input = CharStreams.fromFileName(filename);
             GramaticaLexer lexer = new GramaticaLexer(input);
