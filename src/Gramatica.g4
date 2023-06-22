@@ -18,7 +18,7 @@ operacao_cauda: OP_ARIT operando(operacao_cauda)*;
 
 DEC: 'DECLARACOES';
 ALG: 'ALGORITMO';
-TIPO: 'zInt' | 'rFloat';
+TIPO: 'zInt' | 'rFloat' | 'sLinha';
 ATR: '->';
 IGUAL: '=';
 SE: 'SE';
