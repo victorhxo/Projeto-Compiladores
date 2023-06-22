@@ -1,6 +1,5 @@
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.io.IOException;
 
@@ -11,6 +10,10 @@ public class ExemploLexer {
         try {
             CharStream input = CharStreams.fromFileName(filename);
             GramaticaLexer lexer = new GramaticaLexer(input);
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            GramaticaParser parser = new GramaticaParser(tokens);
+
+            ParseTree ast = parser.programa();
             Token token;
             while(!lexer._hitEOF){
                 token = lexer.nextToken();

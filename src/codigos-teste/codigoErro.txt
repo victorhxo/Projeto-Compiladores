@@ -3,8 +3,8 @@ zInt a
 rFloat b
 rFloat c
 
-ALGORITIMO
-    atribuir 90/10 = a
-    atribuir 10*a = b
-    atribuir (a*b)+(a/b) = c
-    escreve% c
+ALGORITMO
+    -> 90/10 = a
+    -> 10*a = b
+    -> (a*b)+(a/b) = c
+    out c
