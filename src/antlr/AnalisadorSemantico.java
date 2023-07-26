@@ -1,20 +1,37 @@
+package antlr;
+
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.io.IOException;
 
-public class ExemploLexer {
-
+public class AnalisadorSemantico {
     public static void main (String [] args){
-        String filename = "src\\codigos-teste\\codigo.txt";
+        GramaticaParser parser = getParser("src\\codigos-teste\\codigo.txt");
+
+        ParseTree ast = parser.programa();
+
+        System.out.println(ast.toStringTree());
+
+        MeuListener listener = new MeuListener();
+
+        ParseTreeWalker walker = new ParseTreeWalker();
+
+        walker.walk(listener, ast);
+
+        System.out.println(listener.getTabelaSimbolos().toString());
+
+    }
+    public static GramaticaParser getParser(String filename){
+        GramaticaParser parser = null;
         try {
             CharStream input = CharStreams.fromFileName(filename);
             GramaticaLexer lexer = new GramaticaLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            GramaticaParser parser = new GramaticaParser(tokens);
+            parser = new GramaticaParser(tokens);
 
-            ParseTree ast = parser.programa();
-            System.out.println(ast.toStringTree());
+
             /*
             Token token;
             while(!lexer._hitEOF){
@@ -33,5 +50,6 @@ public class ExemploLexer {
         } catch(IOException e){
             e.printStackTrace();
         }
+        return  parser;
     }
 }
