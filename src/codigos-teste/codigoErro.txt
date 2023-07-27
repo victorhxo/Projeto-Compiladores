@@ -2,12 +2,10 @@ DECLARACOES
 zInt x
 rFloat y
 zInt z
-sLinha x
-zInt y
-
+rFloat x
+rFloat z
 ALGORITMO
-    -> 10 = x
+    -> a = x
     -> 10 = y
-    -> x+y = z
-    -> a+x = x
+    -> y = z
     out z
