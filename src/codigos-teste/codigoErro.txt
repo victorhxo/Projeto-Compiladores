@@ -1,10 +1,13 @@
 DECLARACOES
-zInt a
-rFloat b
-rFloat c
+zInt x
+rFloat y
+zInt z
+sLinha x
+zInt y
 
 ALGORITMO
-    -> 90/10 = a
-    -> 10*a = b
-    -> (a*b)+(a/b) = c
-    out c
+    -> 10 = x
+    -> 10 = y
+    -> x+y = z
+    -> a+x = x
+    out z
